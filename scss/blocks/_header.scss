@@ -1,0 +1,46 @@
+.header {
+    margin-bottom: 100px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 62px;
+        align-items: center;
+    }
+    &__list {
+        display: flex;
+        column-gap: 76px;
+        align-items: center;
+    }
+    &__item {
+        color: $headerColor;
+    }
+    &__btn {
+        color: $orangeColor;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        @include primaryFont(20px, 23px, 500);
+        padding: 14px 37px;
+        border: 1px solid $orangeColor;
+        background: none;
+        @include borderRadius(10px);
+        transition: 0.4s;
+
+        &:hover {
+            background-color: $orangeColor;
+            color: $headerColor;
+        }
+    }
+}
+.baground {
+    background-image: url(../img/bgi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: $tabletWidthMid) {
+    .header {
+        margin-bottom: 84px;
+    }
+}

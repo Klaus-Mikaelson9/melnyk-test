@@ -1,0 +1,158 @@
+.form {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__info {
+        &-title {
+            font-family: 'Orchidea Pro';
+            text-transform: uppercase;
+            color: $headerColor;
+            @include primaryFont(40px, 60px, 500);
+
+            span {
+                color: $orangeColor;
+            }
+        }
+        &-text {
+            color: $headerColor;
+            max-width: 623px;
+            margin-top: 35px;
+            @include primaryFont(30px, 35px, 400)
+        }
+    }
+    &__new {
+        background-color: $newBg;
+        padding: 12px 13px;
+        @include borderRadius(10px);
+        margin-top: 232px;
+
+        &-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 16px;
+        }
+        &-item {
+            color: $formBtn;
+            @include primaryFont(20px, 130%, 400);
+        }
+        &-link {
+            font-family: 'Orchidea Pro';
+            color: $orangeColor;
+            text-transform: uppercase;
+            padding: 12px 25px;
+            background-color: $inpurBg;
+            @include primaryFont(30px, 30px, 500);
+            @include borderRadius(10px)
+        }
+    }
+    &__contant {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 64px;
+        margin-left: 15px;
+
+        form {
+            background-color: $videoBtn;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 22px 59px;
+            gap: 20px;
+            @include borderRadius(10px);
+
+            button {
+                color: $formBtn;
+                background-color: $orangeColor;
+                padding: 18px 144px;
+                font-family: 'Roboto';
+                text-align: center;
+                border: none;
+                @include borderRadius(10px);
+                @include primaryFont(20px, 23px, 500);
+                transition: all 0,4s;
+            }
+        }
+    }
+    &__video {
+        margin-bottom: 18px;
+        
+        svg {
+            fill: $videoBtn;
+
+            path {
+                fill: $headerColor;
+            }
+        }
+    }
+    &__title {
+        font-family: 'Orchidea Pro';
+        text-transform: uppercase;
+        color: $orangeColor;
+        @include primaryFont(30px, 30px, 500)
+    }
+    .mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: $tabletWidthMid) {
+    .form {
+        &__container {
+            display: none;
+        }
+        &__info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            &-title {
+                @include primaryFont(45px, 45px, 500);
+            }
+            &-text {
+                margin-top: 20px;
+                @include primaryFont(25px, 29px, 400);
+                text-align: center;
+            }
+        }
+        &__contant {
+            margin: 20px 22px;
+    
+            form {
+                padding: 50px 45px 59px;
+                gap: 20px;
+                @include borderRadius(10px);
+    
+                button {
+                    padding: 18px 278px;
+                }
+            }
+        }
+        &__video {
+            svg {
+                height: 85px;
+                width: 85px;
+            }
+        }
+        &__new {
+            margin: 0;
+            padding: 12px 13px;
+
+            &-list {
+                justify-content: space-evenly;
+            }
+            &-item {
+                svg {
+                    height: 73px;
+                    width: 73px;
+                }
+            }
+        }
+        .mobile {
+            display: block;
+        }
+    }
+}

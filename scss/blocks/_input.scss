@@ -1,0 +1,54 @@
+.input-group {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    @include primaryFont(14px, 16px, 400);
+
+    label {
+        padding: 0 10px;
+        color: $headerColor;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        text-transform: capitalize;
+        pointer-events: none;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 130%;
+        transition: all 0.3s;
+    }
+    input {
+        padding: 17px 20px;
+        width: 360px;
+        border: none;
+        border: none;
+        outline: none;
+        color: $headerColor;
+        font-size: 16px;
+        font-family:inherit;
+        background-color: $inpurBg;
+        border-radius:10px;
+    }
+    & input:focus + label,
+    & input:not(:placeholder-shown) + label {
+        top:0;
+        font-size:16px;
+    }
+}
+
+@media screen and (max-width: $tabletWidthMid) {
+    .input-group {
+        input {
+            padding: 17px 29px;
+            width: 587px;
+            font-size: 18px;
+            font-family:inherit;
+        }
+        & input:focus + label,
+        & input:not(:placeholder-shown) + label {
+            top:0;
+            font-size:18px;
+        }
+    }
+}

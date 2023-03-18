@@ -1,0 +1,35 @@
+$headerColor: #fff;
+$orangeColor: #FDA700;
+$videoBtn: rgba(13, 43, 109, 0.8);
+$inpurBg: #0D2B6D;
+$formBtn: #373737;
+$newBg: rgba(255, 255, 255, 0.8);
+$problemaShadow: 4px 4px 4px rgba(83, 83, 83, 0.25);
+$problemaBgc: #F3F3F3;
+
+
+$bp-md: 600px;
+$bp-lg: 800px;
+$bar-width: 100px;
+$bar-height: 10px;
+$bar-spacing: 25px;     
+
+$imageIds: '1517021897933-0e0319cfbc28', '1533903345306-15d1c30952de', '1545243424-0ce743321e11', '1531306728370-e2ebd9d7bb99';
+
+$tabletWidthProblema: 1892px;
+$desktopWidth: 1780px;
+$tabletMidWidth: 1557px;
+$tabletWidth: 1309px;
+$tabletBigthProblema: 1241px;
+$tabletWidthMid: 1173px;
+// $mobile-width: 740px;
+
+@mixin primaryFont($fontSize, $lineHeight, $fontWeight) {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+}
+
+@mixin borderRadius($radius) {
+    border-radius: $radius;
+}

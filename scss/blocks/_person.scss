@@ -1,0 +1,42 @@
+.person {
+    background-color: $inpurBg;
+    margin-top: 131px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding: 28px 0;
+    }
+    &__wrp {
+        display: flex;
+        column-gap: 20px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+        justify-content: center;
+    }
+    &__item {
+        color: $headerColor;
+        @include primaryFont(20px, 130%, 400);
+
+        span {
+            color: $orangeColor;
+        }
+    }
+}
+
+@media screen and (max-width: $tabletWidthMid) {
+    .person {
+        background-color: $inpurBg;
+    
+        &__container {
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+            padding: 28px 0;
+            align-items: center;
+        }
+    }
+}
